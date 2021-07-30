@@ -50,11 +50,20 @@ addFlower(dandelion, CorpseFlower)
 
 
 
+//hmmmmmm
 
-const findExpensiveFlowers = () => {
+const findExpensiveFlowers = (flowerToFind) => {
     const expensiveFlowers = []  // Do not change this code
 
-
+    for(const flower of flowers) {
+        // Only one phone will cause the condition below to evaluate to true
+        if (flower.id === flowerToFind){ 
+            flowerToFind = flower.price > 1.00
+            flowers.push(flowerToFind)
+            
+        }
+ }
+findExpensiveFlowers()
     /*
         Write a for..of loop that iterate the array
         of flowers, and if the price of a flower is
@@ -68,7 +77,7 @@ const findExpensiveFlowers = () => {
     return expensiveFlowers  // Do not change this code
 }
 
-
+console.log (expensiveFlowers)
 
 
 // Do not touch this code
